@@ -1,12 +1,23 @@
 /* reset */
 * { margin:0; padding:0; box-sizing:border-box; }
 
-/* page background & text */
+/* make body a column flex container */
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
   font-family: Arial, sans-serif;
   background: #3f5ca8;
   color: #222;
   line-height: 1.4;
+}
+
+/* let main grow to fill available space */
+main {
+  flex: 1;
+  display: flex;
+  padding: 1rem;
 }
 
 /* header */
@@ -36,11 +47,7 @@ nav a {
   font-weight: bold;
 }
 
-/* main layout */
-main {
-  display: flex;
-  padding: 1rem;
-}
+/* article/aside */
 article {
   background: #f9e79f;
   padding: 1rem;
@@ -54,11 +61,10 @@ aside {
   flex: 1;
 }
 
-/* footer */
+/* footer now hugs the bottom */
 footer {
   background: #555;
   color: #fff;
   text-align: center;
   padding: 0.5rem;
-  margin-top: 1rem;
 }
